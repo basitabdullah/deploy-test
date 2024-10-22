@@ -1,0 +1,98 @@
+.category-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h1 {
+    font-weight: 300;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    font-size: 30px;
+    text-transform: capitalize;
+  }
+
+  .product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    padding: 30px;
+    margin: 0 auto;
+    max-width: 1500px;
+
+    .product {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px;
+      border: 1px solid rgb(214, 214, 214);
+      border-radius: 30px;
+      overflow: hidden;
+      width: 350px;
+
+      img {
+        width: 300px;
+        height: 300px;
+        align-self: center;
+        object-fit: contain;
+        border-radius: 30px;
+        transition: 0.35s all ease;  
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+
+      .details {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+
+        > h2 {
+          font-weight: 300;
+          z-index: 10;
+          font-size: 18px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          width: 98%;
+          min-height: 60px;
+        }
+
+        p {
+          font-weight: 400;
+          z-index: 10;
+          font-size: 20px;
+        }
+
+        button {
+          padding: 5px 10px;
+          background-color: black;
+          border: none;
+          color: white;
+          cursor: pointer;
+          font-weight: 300;
+          font-size: 17px;
+          border-radius: 100%;
+          height: 50px;
+          width: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: 1s all ease-in-out;
+          &:hover {
+            border-radius: 15px;
+            transform: scale(1.1);
+            transform: rotate(360deg);
+          }
+        }
+      }
+    }
+  }
+}

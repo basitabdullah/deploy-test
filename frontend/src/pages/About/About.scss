@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Calligraffitti&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+.about {
+  // font-family: "Raleway", sans-serif;
+  // font-family: "Calligraffitti", cursive;
+  padding: 50px 100px;
+  min-height: 100vh;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  .about-sec-one {
+    display: flex;
+
+    .text-portion {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      z-index: 100;
+      h1 {
+        font-weight: 900;
+        font-size: 70px;
+        font-family: "Raleway", sans-serif;
+        width: 400px;
+        text-transform: uppercase;
+        color: rgb(37, 37, 37);
+        transition: 1s ease-in-out;
+        &:hover{
+            transform: translateX(10px);
+            color: rgb(142, 142, 142);
+        }
+        
+      }
+      p {
+        font-weight: 300;
+        font-family: "Calligraffitti", cursive;
+        font-size: 32px;
+        color:  black;
+        transition: 1s ease-in-out;
+        &:hover{
+            transform: translateX(10px);
+
+        }
+      }
+    }
+
+    .image-portion {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 340px;
+        top: 160px;
+      
+      img {
+        width: 900px;
+        height: 500px;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .social-media{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 250px;
+    h1{
+        font-weight: 300;
+        font-family: "Raleway", sans-serif;
+        font-size: 50px;
+        color: black;
+        transition: 1s ease-in-out;
+        &:hover{
+            color: rgb(59, 59, 59);
+        }
+    }
+    .links{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;  
+
+        a{
+          color:  black;
+           display: flex;
+           align-items: center;
+           gap: 5px;
+
+           svg{
+            font-size: 20px;
+           }
+        }
+    }
+  }
+}

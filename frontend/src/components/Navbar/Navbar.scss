@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+HR&display=swap");
+
+.navbar {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  font-size: 17px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
+  .left-sec {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    > a {
+      text-transform: uppercase;
+      cursor: pointer;
+      color: black;
+    }
+  }
+  .logo {
+    cursor: pointer;
+    h1 {
+      font-family: "Playwrite HR", cursive;
+      font-weight: 600;
+      font-size: 30px;
+    }
+  }
+
+  .right-sec {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+
+    > a {
+      text-transform: uppercase;
+      cursor: pointer;
+      color: black;
+      position: relative;
+
+      .items-in-cart {
+        background-color: rgb(232, 51, 51);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+        height: 20px;
+        width: 20px;
+        padding: 1px;
+        color: white;
+        position: absolute;
+        top: -12px;
+        right: -8px;
+      }
+    }
+
+    svg {
+      font-size: 25px;
+      cursor: pointer;
+      color: black;
+    }
+    .admin-icon,
+    .login-icon {
+      position: relative;
+
+      &:hover {
+        p {
+          display: block;
+        }
+      }
+      p {
+        display: none;
+        position: absolute;
+        font-size: 10px;
+        background-color: #ededed;
+        text-align: center;
+        padding: 6px;
+        left: -19px;
+        border-radius: 5px;
+        color: rgb(0, 0, 0);
+        z-index: 999;
+      }
+    }
+
+    .login-icon {
+      p {
+        left: -3px;
+      }
+    }
+    .adminModel {
+      width: 130px;
+      height: 130px;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background-color: #c9c9c9a7;
+      backdrop-filter: blur(3px);
+      top: 47px;
+      right: 10px;
+      border-radius: 10px;
+      z-index: 999;
+      gap: 10px;
+
+      a {
+        display: flex;
+        align-items: flex-start;
+
+        gap: 10px;
+        font-size: 15px;
+      }
+    }
+
+    .logout-btn {
+      padding: 5px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      border-radius: 30px;
+      border: none;
+      background-color: rgb(0, 0, 0);
+      font-size: 13px;
+      cursor: pointer;
+    }
+  }
+}

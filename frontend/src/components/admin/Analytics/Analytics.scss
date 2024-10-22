@@ -1,0 +1,30 @@
+.analytics {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+
+    .cards{
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      .analytics-card{
+        border: 1px solid rgb(212, 212, 212);
+        height: 100px;
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+        border-radius: 10px;
+   
+      }
+    }
+
+    .chart{
+      display: flex;
+      width: 100%;
+    }
+    
+  }

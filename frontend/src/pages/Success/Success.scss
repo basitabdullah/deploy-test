@@ -1,0 +1,31 @@
+.success-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .success {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    svg {
+      font-size: 80px;
+      color: rgb(91, 194, 91);
+    }
+
+    p {
+      font-size: 30px;
+      width: 70%;
+      text-align: center;
+      font-weight: 400;
+    }
+
+    >a{
+       background-color: black;
+       padding: 10px;
+       color: aliceblue;
+    }
+  }
+}

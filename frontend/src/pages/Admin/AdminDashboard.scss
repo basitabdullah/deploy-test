@@ -1,0 +1,109 @@
+.admin {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  padding: 50px 100px;
+  gap: 40px;
+
+  > h1 {
+    font-weight: 300;
+    font-family: "Playwrite HR", cursive;
+  }
+
+  .pageSwitcher {
+    display: flex;
+    gap: 20px;
+
+    button {
+      padding: 10px;
+      border: none;
+      background-color: black;
+      font-size: 17px;
+      cursor: pointer;
+      color: white;
+      text-transform: uppercase;
+      transition: 0.25s ease;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .page{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .create-product {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    h1 {
+      font-weight: 300;
+    }
+    .new-product-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 600px;
+
+      label {
+        font-family: 20px;
+        font-weight: 300;
+        margin-top: 5px;
+      }
+
+      select {
+        padding: 10px;
+        border: 1px solid rgb(211, 211, 211);
+        outline: none;
+        background-color: transparent;
+      }
+      input {
+        padding: 10px;
+        border: 1px solid rgb(211, 211, 211);
+        outline: none;
+        background-color: transparent;
+      }
+
+      textarea {
+        padding: 10px;
+        border: 1px solid rgb(211, 211, 211);
+        outline: none;
+        background-color: transparent;
+      }
+      button {
+        padding: 10px;
+        border: none;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        cursor: pointer;
+        font-size: 17px;
+        transition: 0.25s ease;
+        gap: 10px;
+        svg {
+          font-size: 28px;
+          color: rgb(255, 255, 255);
+        }
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+      .upload-label {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        svg {
+          font-size: 28px;
+          color: rgb(23, 23, 23);
+        }
+      }
+    }
+
+    
+  }
+}

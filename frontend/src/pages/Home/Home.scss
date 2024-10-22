@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&display=swap");
+
+.home {
+  min-height: 100vh;
+
+  .carousel-image-container {
+    position: relative;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .description {
+      top: 50%; // Vertically center the text
+      right: 20px; // Position it 20px from the right side (you can adjust this value)
+      transform: translateY(-50%);
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: space-between;
+      padding: 50px 20px;
+
+      .top {
+        color: rgb(235, 235, 235);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        .product-name {
+          font-size: 30px;
+          letter-spacing: 1px;
+          font-weight: 300;
+          text-transform: uppercase;
+          border-bottom: 1px solid rgb(235, 235, 235);
+        }
+
+        .product-feature {
+          font-size: 20px;
+          letter-spacing: 1px;
+          font-weight: 300;
+          text-transform: uppercase;
+          color: rgb(235, 235, 235);
+          font-size: 73px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+
+          .classic {
+            font-family: "Halant", system-ui;
+            margin: 0;
+            padding: 0;
+            font-size: 120px;
+            text-transform: none;
+          }
+
+          .nature {
+            font-size: 30px;
+            letter-spacing: 1px;
+            font-weight: 400;
+          }
+        }
+      }
+
+      .bottom {
+        color: rgb(235, 235, 235);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 20px;
+
+        p {
+          font-size: 20px;
+          letter-spacing: 1px;
+          font-weight: 400;
+          text-transform: uppercase;
+          width: 350px;
+          text-align: right;
+        }
+
+        .shop-now {
+          padding: 10px;
+          width: 200px;
+          border: none;
+          font-size: 18px;
+          cursor: pointer;
+          background-color: #fff;
+          color: black;
+        }
+      }
+    }
+  }
+  .categories-heading {
+    font-weight: 300;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    font-size: 30px;
+    margin-top: 50px;
+
+  }
+  .categories {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1500px;
+
+    @media (max-width: 1700px) {
+      max-width: 1100px;
+
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 1200px) {
+      max-width: 700px;
+
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 750px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .category {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      position: relative;
+      img {
+        width: 350px;
+        height: 500px;
+        object-fit: cover;
+        border-radius: 30px;
+        transition: 0.25s ease;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(105%);
+          opacity: 0.7;
+        }
+      }
+      .category-title {
+        position: absolute;
+        bottom: 20px;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: rgb(235, 235, 235);
+        background-color: #fff;
+        color: black;
+        padding: 10px 20px;
+      }
+    }
+  }
+
+  .products-heading {
+    font-weight: 300;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    font-size: 30px;
+    margin-top: 50px;
+  }
+  .featured-products {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1500px;
+    padding: 40px 0px;
+
+    @media (max-width: 1700px) {
+      max-width: 1100px;
+
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 1200px) {
+      max-width: 700px;
+
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 750px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

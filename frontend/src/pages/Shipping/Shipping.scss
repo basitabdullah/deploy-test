@@ -1,0 +1,77 @@
+.shipping-page {
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  position: relative;
+
+  .back {
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid black;
+    background-color: inherit;
+    position: absolute;
+    left: 10px;
+    top: 50px;
+    cursor: pointer;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    border-radius: 50%;
+
+    svg {
+      color: #fff;
+      transition: 0.25s ease;
+      &:hover {
+        transform: translate(-8px);
+      }
+    }
+  }
+  .shipping-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 600px;
+
+    > h4 {
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    .address {
+      display: flex;
+      gap: 10px;
+
+      > input {
+        padding: 10px;
+        border: 1px solid gray;
+        outline: none;
+        width: 50%;
+      }
+    }
+
+    > input,
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid gray;
+      outline: none;
+    }
+
+    > button {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid white;
+      color: white;
+      background-color: black;
+      font-size: 18px;
+      transition: 0.25s ease;
+      &:hover {
+        background-color: #fff;
+        border: 1px solid rgb(0, 0, 0);
+        color: black;
+      }
+    }
+  }
+}

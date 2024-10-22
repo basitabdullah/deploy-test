@@ -1,0 +1,95 @@
+.contact {
+  // height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  padding: 100px;
+
+  h1 {
+    font-weight: 300;
+    font-family: "Playwrite HR", cursive;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .email-input {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      input {
+        width: 300px;
+        padding: 10px;
+        border: 1px solid gray;
+        outline: none;
+        font-size: 15px;
+        background-color: transparent;
+        border: 1px solid rgb(211, 211, 211);
+
+      }
+
+      label {
+        font-family: 20px;
+        font-weight: 300;
+      }
+    }
+
+    .upper {
+      display: flex;
+      gap: 30px;
+    }
+    label {
+      font-family: 20px;
+      font-weight: 300;
+    }
+    .email-textarea {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      textarea {
+        height: 300px;
+         background-color: transparent;
+        padding: 10px;
+        border: 1px solid gray;
+        outline: none;
+        font-size: 15px;
+        border: 1px solid rgb(211, 211, 211);
+
+      }
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      background-color: black;
+      color: white;
+      font-size: 20px;
+      padding: 10px 0px;
+      border: none;
+      cursor: pointer;
+     
+      &:hover {
+        img {
+          transform: translateX(-20px);
+          display: flex;
+          color: #000;
+        }
+      }
+
+      img {
+        transition: 1s all ease;
+        width: 30px;
+        transform: translateX(10px);
+      }
+
+      
+    }
+  }
+}

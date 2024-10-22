@@ -1,0 +1,34 @@
+.loader-min-container{
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100%;
+height: 50vh;
+}
+
+.loader-min {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  background: linear-gradient(0deg, rgba(144, 143, 143, 0.2) 33%, #111111 100%);
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader-min:after {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: white;
+}
+@keyframes rotation {
+  0% { transform: rotate(0deg) }
+  100% { transform: rotate(360deg)}
+} 
