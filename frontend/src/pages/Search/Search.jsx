@@ -72,7 +72,7 @@ const Search = () => {
         <label>Category</label>
         <select value={category} onChange={(e) => setCategory(e.target.value)}>
           <option>All</option>
-          {categories.map((i) => (
+          {categories?.map((i) => (
             <option value={i.cat} key={i.cat}>
               {i.name}
             </option>

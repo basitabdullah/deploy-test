@@ -13,7 +13,7 @@ const AdminDashboard = () => {
 
       <h1>Admin Dashboard</h1>
       <div className="pageSwitcher">
-        {pages.map((page) => (
+        {pages?.map((page) => (
           <button key={page} onClick={() => setPage(page)}>
             {page}
           </button>

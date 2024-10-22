@@ -75,7 +75,7 @@ const Home = () => {
        
       >
       {
-        categories.map((cat)=>(
+        categories?.map((cat)=>(
           <Link to={`/category${cat.href}`} key={cat.name} >
           <div className="category">
             <img

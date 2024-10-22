@@ -27,7 +27,7 @@ const Category = () => {
         <MinLoader />
       ) : (
         <div className="product-container">
-          {products.map((i) => (
+          {products?.map((i) => (
             <div className="product" key={i._id}>
               <img src={i.image} alt="err" />
               <div className="details">
