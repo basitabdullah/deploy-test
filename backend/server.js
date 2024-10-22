@@ -23,7 +23,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 const corsOptions = {
-  origin: "https://frontend-beige-ten-10.vercel.app/", // Allow requests from the React app
+  origin: process.env.CLIENT_URL, // Allow requests from the React app
   methods: "GET,POST,PUT,DELETE,PATCH", // Allow these HTTP methods
   credentials: true, // Enable credentials (cookies, auth headers)
 };
