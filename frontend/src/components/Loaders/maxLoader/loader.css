@@ -2,10 +2,15 @@
 width: 100%;
 height: 100vh;
 display: flex;
+flex-direction: column;
 align-items: center;
 justify-content: center;
+gap: 30px;
 }
-
+span{
+  color: red;
+  font-weight: 600;
+}
 .loader {
   transform: rotateZ(45deg);
   perspective: 1000px;

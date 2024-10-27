@@ -23,7 +23,6 @@ import Cancel from "./pages/Cancel/Cancel";
 const App = () => {
   const { user, checkAuth,checkingAuth } = useUserStore();
   const { getCartItems } = useCartStore();
-
   useEffect(() => {
     checkAuth();
   }, []);

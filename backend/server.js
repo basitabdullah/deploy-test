@@ -10,11 +10,11 @@ import paymentRoutes from "./routes/paymentRoutes.js";
 import analyticsRoutes from "./routes/analyticsRoutes.js";
 import { contact } from "./controllers/contactController.js";
 import dotenv from "dotenv";
-import path from "path";
+// import path from "path";
 const app = express();
 dotenv.config();
 
-const __dirname = path.resolve();
+// const __dirname = path.resolve();
 
 // if (process.env.NODE_ENV === "production") {
 //   app.use(express.static(path.join(__dirname, "/frontend/dist")));
