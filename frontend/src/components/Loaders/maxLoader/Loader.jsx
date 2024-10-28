@@ -6,8 +6,8 @@ const Loader = () => {
       <span className="loader"></span>
       <p className="alert">
         <span>Alert :</span> This web application is deployed on a{" "}
-        <span>(free-tier)</span> of render deployments so the initial load can
-        take upto <span>90-100</span> seconds.
+        <span>(free-tier)</span> of render deployments so the initial loading can
+        take upto <span>100-150</span> seconds.
       </p>
     </div>
   );

@@ -8,7 +8,16 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
+  @media (max-width: 548px) {
+    padding: 10px 30px;
+    justify-content: center;
+    
+  }
 
+  @media (max-width: 1500px) {
+    flex-direction: column;
+    gap: 50px;
+  }
   .about-sec-one {
     display: flex;
 
@@ -17,6 +26,7 @@
       flex-direction: column;
       gap: 20px;
       z-index: 100;
+    
       h1 {
         font-weight: 900;
         font-size: 70px;
@@ -25,9 +35,18 @@
         text-transform: uppercase;
         color: rgb(37, 37, 37);
         transition: 1s ease-in-out;
+
         &:hover{
             transform: translateX(10px);
             color: rgb(142, 142, 142);
+        }
+
+        @media (max-width: 548px) {
+          font-size: 50px;
+          width: 100%;
+        }
+        @media (max-width: 350px) {
+          font-size: 35px;
         }
         
       }
@@ -41,6 +60,9 @@
             transform: translateX(10px);
 
         }
+        @media (max-width: 350px) {
+          font-size: 30px;
+        }
       }
     }
 
@@ -51,6 +73,10 @@
         position: absolute;
         right: 340px;
         top: 160px;
+        @media (max-width: 1500px) {
+         display: none;
+         
+        }
       
       img {
         width: 900px;
@@ -73,6 +99,9 @@
         transition: 1s ease-in-out;
         &:hover{
             color: rgb(59, 59, 59);
+        }
+        @media (max-width: 350px) {
+          font-size: 35px;
         }
     }
     .links{

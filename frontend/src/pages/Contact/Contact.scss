@@ -5,7 +5,12 @@
   flex-direction: column;
   gap: 30px;
   padding: 100px;
-
+  @media (max-width: 747px) {
+    padding: 50px;
+  }
+  @media (max-width: 460px) {
+    padding: 10px;
+  }
   h1 {
     font-weight: 300;
     font-family: "Playwrite HR", cursive;
@@ -15,6 +20,9 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    @media (max-width: 747px) {
+      width: 100%;
+    }
 
     .email-input {
       display: flex;
@@ -29,7 +37,9 @@
         font-size: 15px;
         background-color: transparent;
         border: 1px solid rgb(211, 211, 211);
-
+        @media (max-width: 747px) {
+          width: 100%;
+        }
       }
 
       label {
@@ -41,6 +51,9 @@
     .upper {
       display: flex;
       gap: 30px;
+      @media (max-width: 747px) {
+        flex-direction: column;
+      }
     }
     label {
       font-family: 20px;
@@ -53,13 +66,12 @@
 
       textarea {
         height: 300px;
-         background-color: transparent;
+        background-color: transparent;
         padding: 10px;
         border: 1px solid gray;
         outline: none;
         font-size: 15px;
         border: 1px solid rgb(211, 211, 211);
-
       }
     }
 
@@ -74,7 +86,7 @@
       padding: 10px 0px;
       border: none;
       cursor: pointer;
-     
+
       &:hover {
         img {
           transform: translateX(-20px);
@@ -88,8 +100,6 @@
         width: 30px;
         transform: translateX(10px);
       }
-
-      
     }
   }
 }

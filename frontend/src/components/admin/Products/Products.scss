@@ -3,9 +3,7 @@
     background-color: #2d3748;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 0.5rem;
-    overflow: hidden;
-    // margin: 0 auto;
-    width: 80%;
+    overflow: auto;
     opacity: 1;
     transform: translateY(0);
     transition: opacity 0.8s, transform 0.8s;

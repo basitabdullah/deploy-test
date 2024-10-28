@@ -8,6 +8,9 @@ justify-content: center;
 gap: 30px;
 }
 .alert{
+  width: 50vw;
+  text-align: center;
+
   >span{
     color: red;
     font-weight: 600;

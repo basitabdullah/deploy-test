@@ -6,7 +6,10 @@ import { BsCart2 } from "react-icons/bs";
 import { IoPersonOutline } from "react-icons/io5";
 import { useUserStore } from "../../stores/useUserStore";
 import { useCartStore } from "../../stores/useCartStore";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { useState } from "react";
 const Navbar = () => {
+  const [hamburgerMenu, setHamburgerMenu] = useState(false);
   const { logout, user } = useUserStore();
   const { cart } = useCartStore();
   const itemsInCart = cart.length;
@@ -24,7 +27,9 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="logo">
-        <h1>meteor</h1>
+        <Link to={"/"}>
+          <h1>meteor</h1>
+        </Link>
       </div>
       <div className="right-sec">
         <Link to={"/about"}>
@@ -51,7 +56,9 @@ const Navbar = () => {
           <>
             <Link to={"/cart"}>
               <BsCart2 />
-              {itemsInCart > 0 && <p className="items-in-cart">{itemsInCart}</p>}
+              {itemsInCart > 0 && (
+                <p className="items-in-cart">{itemsInCart}</p>
+              )}
             </Link>
             <button className="logout-btn" onClick={logout}>
               Logout
@@ -59,6 +66,46 @@ const Navbar = () => {
           </>
         )}
       </div>
+
+      <div className="mini-screen-icons">
+        {user && (
+          <>
+            <Link to={"/cart"}>
+              <BsCart2 />
+              {itemsInCart > 0 && (
+                <p className="items-in-cart">{itemsInCart}</p>
+              )}
+            </Link>
+          </>
+        )}
+        {user && user.role === "admin" && (
+          <Link to={"/admin-dashboard"} className="admin-icon">
+            <IoLockOpenOutline />
+            <p>Admin Dashboard</p>
+          </Link>
+        )}
+        <RxHamburgerMenu
+          className="ham-icon"
+          onClick={() => setHamburgerMenu(!hamburgerMenu)}
+        />
+      </div>
+
+      {hamburgerMenu && (
+        <div className="hamburger-menu">
+          <Link to={"/search"}>
+            <p>PRODUCTS</p>
+          </Link>
+          <Link to={"/about"}>
+            <p>ABOUT</p>
+          </Link>
+          <Link to="/login" className="login-icon">
+            <p>LOGIN</p>
+          </Link>
+          <button className="logout-btn" onClick={logout}>
+            Logout
+          </button>
+        </div>
+      )}
     </div>
   );
 };
