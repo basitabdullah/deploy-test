@@ -1,5 +1,5 @@
 import "./Navbar.scss";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { IoSearchOutline } from "react-icons/io5";
 import { IoLockOpenOutline } from "react-icons/io5";
 import { BsCart2 } from "react-icons/bs";
@@ -7,12 +7,18 @@ import { IoPersonOutline } from "react-icons/io5";
 import { useUserStore } from "../../stores/useUserStore";
 import { useCartStore } from "../../stores/useCartStore";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 const Navbar = () => {
   const [hamburgerMenu, setHamburgerMenu] = useState(false);
   const { logout, user } = useUserStore();
   const { cart } = useCartStore();
   const itemsInCart = cart.length;
+
+  const loaction = useLocation();
+
+  useEffect(() => {
+    setHamburgerMenu(false);
+  }, [loaction]);
   return (
     <div className="navbar">
       <div className="left-sec">
