@@ -1,5 +1,5 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&family=Ephesis&family=Parisienne&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Calligraffitti&family=Ephesis&family=Parisienne&family=Playwrite+HR:wght@100..400&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Calligraffitti&family=Ephesis&family=Parisienne&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 .navbar {
   display: flex;
   background-color: rgb(255, 255, 255);
@@ -25,7 +25,7 @@
     }
   }
   .logo {
-    >a {
+    > a {
       cursor: pointer;
       font-family: "Ephesis", cursive;
       text-decoration: none;
