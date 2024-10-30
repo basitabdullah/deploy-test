@@ -13,15 +13,25 @@ Finally, Cloudinary is used for efficient image storage and management, making t
 To run this project, you will need to add the following environment variables to your .env file
 
 PORT = port_number
+
 MONGO_URI= mongo uri string
+
 JWT_SECRET= jwtsecret
+
 NODE_ENV = development
+
 CLOUDINARY_CLOUD_NAME = cloudname
+
 CLOUDINARY_API_KEY =  key
+
 CLOUDINARY_API_SECRET = CLOUDINARY_API_secret
+
 STRIPE_SECRET_KEY = STRIPE_SECRET_KEYcdfvfvfvdfvf
+
 CLIENT_URL = CLIENT_URL
+
 EMAIL_USER = your_email
+
 EMAIL_PASS= app_password_from_google
 
 
