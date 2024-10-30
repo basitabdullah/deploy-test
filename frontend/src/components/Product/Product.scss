@@ -8,7 +8,20 @@
   overflow: hidden;
   width: 330px;
   margin: 0 auto;
-background-color: rgb(245, 245, 245);
+  background-color: rgb(245, 245, 245);
+  @media (max-width: 770px) {
+    width: 300px;
+    
+  }
+  @media (max-width: 640px) {
+    width: 200px;
+    padding: 20px;
+  }
+  @media (max-width: 470px) {
+    width: 100%;
+    gap: 5px;
+    border-radius: 10px;
+  }
   img {
     width: 200px;
     height: 200px;
@@ -19,6 +32,16 @@ background-color: rgb(245, 245, 245);
     &:hover {
       transform: scale(1.1);
     }
+
+    @media (max-width: 640px) {
+      width: 100px;
+      height: 100px;
+    }
+    @media (max-width: 640px) {
+      width: 80px;
+      height: 80px;
+    }
+  
   }
 
   .details {
@@ -35,6 +58,9 @@ background-color: rgb(245, 245, 245);
       overflow: hidden;
       width: 98%;
       min-height: 40px;
+      @media (max-width: 640px) {
+       font-size: 15px;
+      }
     }
 
     p {
@@ -51,6 +77,9 @@ background-color: rgb(245, 245, 245);
       color: white;
       transition: 0.45s ease;
       cursor: pointer;
+      @media (max-width: 640px) {
+        padding: 5px;
+       }
       &:hover {
         transform: scale(1.1);
         background-color: #6d6d6d;

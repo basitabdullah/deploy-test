@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Playwrite+HR&display=swap");
 
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&family=Ephesis&family=Parisienne&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 .navbar {
   display: flex;
   background-color: rgb(255, 255, 255);
@@ -25,11 +25,12 @@
     }
   }
   .logo {
-    cursor: pointer;
-    h1 {
-      font-family: "Playwrite HR", cursive;
+    >a {
+      cursor: pointer;
+      font-family: "Ephesis", cursive;
+      text-decoration: none;
       font-weight: 600;
-      font-size: 30px;
+      font-size: 40px;
       color: black;
     }
   }
@@ -196,19 +197,18 @@
     @media (max-width: 800px) {
       display: flex;
     }
-   
   }
   .hamburger-menu {
     position: absolute;
     right: 0px;
-    top: 70px;
+    top: 73px;
     z-index: 998;
     background-color: rgb(24, 24, 24);
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 30px;
-     @media (min-width: 800px) {
+    @media (min-width: 800px) {
       display: none;
     }
 
@@ -221,6 +221,19 @@
       &:hover {
         color: gray;
       }
+    }
+
+    .logout-btn {
+      padding: 5px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: black;
+      border: none;
+      outline: none;
+      background-color: rgb(255, 255, 255);
+      font-size: 13px;
+      cursor: pointer;
     }
   }
 }

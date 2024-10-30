@@ -9,6 +9,10 @@
     flex-direction: column;
     gap: 10px;
     width: 600px;
+    @media (max-width : 600px) {
+      width: 100%;
+      padding: 10px;
+    }
 
     > h4 {
       font-size: 28px;
@@ -19,56 +23,57 @@
     label {
       color: gray;
       margin-top: 10px;
+      font-size: 18px;
     }
-    > input{
+    > input {
       width: 100%;
       padding: 10px;
       border: 1px solid gray;
       outline: none;
+      font-size: 18px;
+      border-radius: 0%;
     }
 
-
-    p{
-        margin-top: 30px;
-        color: rgb(185, 45, 20);
+    p {
+      margin-top: 30px;
+      color: rgb(185, 45, 20);
     }
 
-
-    .register-text{
+    .register-text {
       margin-top: 30px;
       color: rgb(108, 108, 108);
 
-      a{
+      a {
         color: #4ac448;
       }
     }
-    button{
+    button {
       margin-top: 20px;
-        width: 100%;
-        padding: 10px;
-        border: 1px solid white;
-        color: white;
-        background-color: black;
-        font-size: 18px;
-        transition: 0.25s ease;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        gap: 8px;
-        &:hover {
-          background-color: #4ac448;
-          border: 1px solid #4ac448;
+      width: 100%;
+      padding: 10px;
+      border: 1px solid white;
+      color: white;
+      background-color: black;
+      font-size: 18px;
+      transition: 0.25s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      gap: 8px;
+      &:hover {
+        background-color: #4ac448;
+        border: 1px solid #4ac448;
 
-          svg{
-            transform: translateX(30px);
-          }
+        svg {
+          transform: translateX(30px);
         }
+      }
 
-        svg{
-          font-size: 30px;
-          transition: 0.75s all ease-in-out;
-        }
+      svg {
+        font-size: 30px;
+        transition: 0.75s all ease-in-out;
+      }
     }
   }
 }

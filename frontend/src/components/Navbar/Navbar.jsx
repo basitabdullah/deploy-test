@@ -34,7 +34,7 @@ const Navbar = () => {
       </div>
       <div className="logo">
         <Link to={"/"}>
-          <h1>meteor</h1>
+          meteor
         </Link>
       </div>
       <div className="right-sec">
@@ -107,9 +107,11 @@ const Navbar = () => {
           <Link to="/login" className="login-icon">
             <p>LOGIN</p>
           </Link>
-          <button className="logout-btn" onClick={logout}>
-            Logout
-          </button>
+          {user && (
+            <button className="logout-btn" onClick={logout}>
+              Logout
+            </button>
+          )}
         </div>
       )}
     </div>
