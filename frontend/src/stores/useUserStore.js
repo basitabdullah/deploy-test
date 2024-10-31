@@ -35,6 +35,7 @@ export const useUserStore = create((set, get) => ({
         password,
       });
       set({ user: res.data.user, loading: false });
+      toast.success(`Welcome ${res.data.user.name}`);
     } catch (error) {
       set({ loading: false });
       toast.error(error.response.data.message || "An unexpected error occured");
@@ -45,6 +46,7 @@ export const useUserStore = create((set, get) => ({
     try {
       await axios.get("/auth/logout");
       set({ user: null });
+      toast.success("Logged Out Successfully!");
     } catch (error) {
       toast.error(error.response.data.message || "An unexpected error occured");
     }

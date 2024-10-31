@@ -33,9 +33,7 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="logo">
-        <Link to={"/"}>
-          meteor
-        </Link>
+        <Link to={"/"}>meteor</Link>
       </div>
       <div className="right-sec">
         <Link to={"/about"}>
@@ -100,6 +98,9 @@ const Navbar = () => {
         <div className="hamburger-menu">
           <Link to={"/search"}>
             <p>PRODUCTS</p>
+          </Link>
+          <Link to={"/contact-us"}>
+            <p>CONTACT</p>
           </Link>
           <Link to={"/about"}>
             <p>ABOUT</p>

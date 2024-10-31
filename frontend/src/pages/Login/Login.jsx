@@ -9,7 +9,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  const { login } = useUserStore();
+  const { login, loading } = useUserStore();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -46,8 +46,9 @@ const Login = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
         {error && <p>Error {error}</p>}
-        <button >
-          Sign in <IoArrowForwardCircleOutline />
+        <button disabled={loading}>
+          {loading ? "Logging in..." : "Sign in"}
+          <IoArrowForwardCircleOutline />
         </button>
         <p className="register-text">
           Don't have an account? <a href="/signup">Register</a>

@@ -13,8 +13,7 @@ const Signup = () => {
     confirmPassword: "",
   });
 
-  const [error, setError] = useState("");
-  const { signup, user } = useUserStore();
+  const { signup, loading } = useUserStore();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -57,9 +56,8 @@ const Signup = () => {
             setUserData({ ...userData, confirmPassword: e.target.value })
           }
         />
-        {error && <p>Error {error}</p>}
         <button onClick={handleSubmit}>
-          Sign up <IoArrowForwardCircleOutline />
+        {loading ? "Logging in..." : "Sign up"} <IoArrowForwardCircleOutline />
         </button>
         <p className="register-text">
           Already have an account? <a href="/login">Login</a>

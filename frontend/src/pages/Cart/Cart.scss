@@ -142,6 +142,49 @@
         }
       }
     }
+
+    .recommended-products {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .products {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+
+
+        .product-recommended-wrapper{
+          img{
+            height: 200px;
+            object-fit: contain;
+            margin-bottom: 20px;
+          }
+          .details{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            h2{
+              font-size: 14px;
+              width: 200px;
+              min-height: 40px;
+            }
+           
+            button{
+             width: 100px;
+             background-color: black;
+             color: #fff;
+             border: none;
+             padding: 5px;
+            }
+
+
+          }
+        }
+      }
+      h2 {
+        font-weight: 300;
+      }
+    }
   }
 
   .right {

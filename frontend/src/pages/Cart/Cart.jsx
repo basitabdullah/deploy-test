@@ -9,6 +9,7 @@ import { MdAttachMoney } from "react-icons/md";
 import { useCartStore } from "../../stores/useCartStore.js";
 import { loadStripe } from "@stripe/stripe-js";
 import axios from "../../lib/axios.js";
+import { useProductStore } from "../../stores/useProductStore.js";
 
 const stripePromise = loadStripe(
   "pk_test_51Q1WxcGOd09WDjBnE2HoXFh6QFlCciriJzX0GNGowTeX21TBg5eD0m8jCzwdGhVIZpR1GqXv7BqcnPaZt2ziWTol00sM23RRBO"
@@ -27,8 +28,12 @@ const Cart = () => {
     validateCoupon,
     removeCoupon,
   } = useCartStore();
-
+  const { products, getRecomemdedProducts } = useProductStore();
+  const { addToCart } = useCartStore();
   const [couponCode, setCouponCode] = useState("");
+  useEffect(() => {
+    getRecomemdedProducts();
+  }, [getRecomemdedProducts]);
 
   useEffect(() => {
     getMyCoupon();
@@ -120,7 +125,28 @@ const Cart = () => {
                 </div>
               </div>
             ))}
+            <div className="recommended-products">
+              <h2>Recommended-Products</h2>
+              <div className="products">
+                {products.map((product) => (
+                  <div
+                    className="product-recommended-wrapper"
+                    key={product._id}
+                  >
+                    <img src={product.image} alt="err" />
+                    <div className="details">
+                      <h2>{product.name}</h2>
+                      <p>${product.price}</p>
+                      <button onClick={() => addToCart(product)}>
+                        Add to cart
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
+
           <div className="right">
             <p className="subtotal">Subtotal : ${subtotal}</p>
             {savings > 0 && (
