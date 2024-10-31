@@ -6,12 +6,11 @@
   padding: 50px 100px;
   min-height: 100vh;
   display: flex;
-  width: 100%;
+  max-width: 1500px;
   justify-content: space-between;
   @media (max-width: 548px) {
     padding: 10px 30px;
     justify-content: center;
-    
   }
 
   @media (max-width: 1500px) {
@@ -26,7 +25,7 @@
       flex-direction: column;
       gap: 20px;
       z-index: 100;
-    
+
       h1 {
         font-weight: 900;
         font-size: 70px;
@@ -36,9 +35,9 @@
         color: rgb(37, 37, 37);
         transition: 1s ease-in-out;
 
-        &:hover{
-            transform: translateX(10px);
-            color: rgb(142, 142, 142);
+        &:hover {
+          transform: translateX(10px);
+          color: rgb(142, 142, 142);
         }
 
         @media (max-width: 548px) {
@@ -48,17 +47,15 @@
         @media (max-width: 350px) {
           font-size: 35px;
         }
-        
       }
       p {
         font-weight: 300;
         font-family: "Calligraffitti", cursive;
         font-size: 32px;
-        color:  black;
+        color: black;
         transition: 1s ease-in-out;
-        &:hover{
-            transform: translateX(10px);
-
+        &:hover {
+          transform: translateX(10px);
         }
         @media (max-width: 350px) {
           font-size: 30px;
@@ -67,58 +64,60 @@
     }
 
     .image-portion {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        right: 340px;
-        top: 160px;
-        @media (max-width: 1500px) {
-         display: none;
-         
-        }
-      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      left: 200px;
+      top: 110px;
+      max-width: 900px;
+      height: 500px;
+      padding: 10px;
+
+      @media (max-width: 1010px) {
+        display: none;
+      }
       img {
-        width: 900px;
-        height: 500px;
+        height: 100%;
+        width: 100%;
         object-fit: contain;
       }
     }
   }
 
-  .social-media{
+  .social-media {
     display: flex;
     flex-direction: column;
     gap: 20px;
     width: 250px;
-    h1{
-        font-weight: 300;
-        font-family: "Raleway", sans-serif;
-        font-size: 50px;
-        color: black;
-        transition: 1s ease-in-out;
-        &:hover{
-            color: rgb(59, 59, 59);
-        }
-        @media (max-width: 350px) {
-          font-size: 35px;
-        }
+    h1 {
+      font-weight: 300;
+      font-family: "Raleway", sans-serif;
+      font-size: 50px;
+      color: black;
+      transition: 1s ease-in-out;
+      &:hover {
+        color: rgb(59, 59, 59);
+      }
+      @media (max-width: 350px) {
+        font-size: 35px;
+      }
     }
-    .links{
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      a {
+        color: black;
         display: flex;
-        flex-direction: column;
-        gap: 20px;  
+        align-items: center;
+        gap: 5px;
 
-        a{
-          color:  black;
-           display: flex;
-           align-items: center;
-           gap: 5px;
-
-           svg{
-            font-size: 20px;
-           }
+        svg {
+          font-size: 20px;
         }
+      }
     }
   }
 }
