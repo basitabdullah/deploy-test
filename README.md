@@ -1,4 +1,3 @@
-
 # Meteor E-commerce
 
 For Meteor E-commerce, I implemented a full-stack solution using a range of modern technologies. The application uses React for the front-end, allowing for dynamic user interfaces, while Sass provides modular and efficient styling. Zustand handles state management across components, ensuring responsive and smooth UI interactions.
@@ -6,7 +5,6 @@ For Meteor E-commerce, I implemented a full-stack solution using a range of mode
 On the server side, Express.js with Mongoose and MongoDB is used to manage database operations and API endpoints. Jsonwebtoken secures the authentication flow, and Bcrypt hashes passwords for user security. For secure payments, Stripe is integrated, ensuring reliable transaction handling. Axios facilitates communication between the front and back ends, streamlining data requests and responses.
 
 Finally, Cloudinary is used for efficient image storage and management, making the e-commerce experience visually engaging while maintaining performance.
-
 
 ## Environment Variables
 
@@ -34,7 +32,6 @@ EMAIL_USER = your_email
 
 EMAIL_PASS= app_password_from_google
 
-
 ## Run Locally
 
 Clone the project
@@ -54,20 +51,27 @@ Install dependencies
 ```bash
   npm install
 ```
-Start the frontend server
+
+Start the Frontend server
+
 ```bash
   npm run dev
 ```
+
 Go to the Root directory
 
 ```bash
-  cd ..
+  cd..
 ```
+
 Install dependencies
+
 ```bash
   npm install
 ```
-Start the backend server
+
+Start the Backend server
+
 ```bash
   npm run dev
 ```

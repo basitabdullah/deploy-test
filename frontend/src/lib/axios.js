@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "http://localhost:5000/api",//temp
+  baseURL: "https://frontend-seven-gray-76.vercel.app/api",//temp
   withCredentials: true, // send cookies to the server
 });
 
