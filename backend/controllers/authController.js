@@ -16,10 +16,10 @@ const generateToken = async (userId) => {
 const setCookies = async (res, token) => {
   res.cookie("jwtAccessToken", token, {
     httpOnly: true,
-    secure: false,
+    secure: true,
     maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days in milliseconds
     sameSite: "None",
-  }); // storing cookie
+  }); 
 };
 
 export const register = async (req, res) => {
