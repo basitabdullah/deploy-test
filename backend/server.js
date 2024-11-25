@@ -10,19 +10,12 @@ import paymentRoutes from "./routes/paymentRoutes.js";
 import analyticsRoutes from "./routes/analyticsRoutes.js";
 import { contact } from "./controllers/contactController.js";
 import dotenv from "dotenv";
-// import path from "path";
+import path from "path";
+
 const app = express();
 dotenv.config();
 
-// const __dirname = path.resolve();
-
-// if (process.env.NODE_ENV === "production") {
-//   app.use(express.static(path.join(__dirname, "/frontend/dist")));
-
-//   app.get("*", (req, res) => {
-//     res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
-//   });
-// }
+const __dirname = path.resolve();
 
 const corsOptions = {
   origin: process.env.CLIENT_URL, // Allow requests from the React app
@@ -40,6 +33,14 @@ app.use("/api/coupon", couponRoutes);
 app.use("/api/payment", paymentRoutes);
 app.use("/api/analytics", analyticsRoutes);
 app.post("/api/send-email", contact);
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "/frontend/dist")));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
+  });
+}
 
 app.listen(process.env.PORT, (req, res) => {
   console.log(`Listening on port ${process.env.PORT}`);
